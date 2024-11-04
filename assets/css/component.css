@@ -1,0 +1,323 @@
+@import url("https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=League+Spartan:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Overpass:ital,wght@0,100..900;1,100..900&family=Space+Grotesk:wght@300..700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+/* 1. Use a more-intuitive box-sizing model */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+* {
+  margin: 0;
+}
+
+body {
+  /* 3. Add accessible line-height */
+  line-height: 1.5;
+  /* 4. Improve text rendering */
+  -webkit-font-smoothing: antialiased;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  font-family: "Montserrat";
+  background-color: #f7f7fe;
+  background-image: url(../images/bg-lines-1.svg);
+  background-repeat: no-repeat;
+  background-position: right top;
+}
+
+html {
+  height: 100%;
+  margin: 0;
+}
+
+/* 5. Improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 6. Inherit fonts for form controls */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* 7. Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* 8. Improve line wrapping */
+p {
+  text-wrap: pretty;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+/*
+  9. Create a root stacking context
+*/
+#root,
+#__next {
+  isolation: isolate;
+}
+
+ul,
+ol {
+  list-style: none;
+  padding-left: 0px;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  /* justify-content: center; */
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin-inline: auto;
+  padding-inline: 24px; /* büyük ekranda sıfılanacak */
+  background-image: none;
+}
+
+h2 {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 39.01px;
+  text-align: center;
+  color: #6e728e;
+  margin-bottom: 40px;
+  margin-top: 64px; /* büyük ekranda sıfılanacak */
+}
+
+.aylikYillikTxt {
+  font-family: "Montserrat";
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 28px;
+  text-align: right;
+  color: #6e728e;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 24px;
+  margin-inline: auto;
+}
+
+.switch {
+  appearance: none;
+  background: linear-gradient(135deg, #a2a7f0 0%, #696edd 100%);
+  height: 32px;
+  width: 56px;
+  display: inline-flex;
+  margin: 0;
+  border-radius: 15px;
+  box-sizing: border-box;
+  padding: 4px;
+  color: #848ead;
+}
+
+.switch:after {
+  content: "";
+  background-color: white;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+}
+
+.switch:checked {
+  justify-content: end;
+}
+
+.selectionBoxes {
+  display: flex;
+  flex-direction: column;
+  /* flex-direction: row; */
+  align-items: center;
+  /* margin-top: 64px; */
+  margin-top: 80px;
+  gap: 32px; /* büyük ekranda sıfılanacak */
+}
+
+.professionalBox {
+  background: linear-gradient(135deg, #a2a7f0 0.05%, #696edd 100.05%);
+  box-shadow: 0px 20px 40px 0px #d4d2f480;
+  /* padding: 55px 35px; */
+  padding: 32px 29px;
+  border-radius: 10px;
+}
+
+.professionalBox h5 {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 28px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.basicBox,
+.masterBox {
+  background-color: white;
+  padding: 32px 29px;
+  /* padding: 31px 31px; */
+  /* border-radius: 10px 0px 0px 10px; */
+  border-radius: 10px;
+}
+
+.basicBox h5,
+.masterBox h5 {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 28px;
+  text-align: center;
+  color: #6e728e;
+}
+
+p {
+  font-size: 72px;
+  font-weight: 700;
+  line-height: 71px;
+  letter-spacing: -2.1600000858306885px;
+  text-align: left;
+  display: flex;
+  justify-content: center;
+  gap: 11px;
+  margin-top: 24px;
+  margin-bottom: 32px;
+}
+
+.basicPrice,
+.masterPrice {
+  color: #4a4d60;
+}
+
+.professionalPrice {
+  color: white;
+}
+
+p span {
+  font-size: 40px;
+  line-height: 48.76px;
+  letter-spacing: -1.2000000476837158px;
+  text-align: center;
+  align-content: center;
+  align-self: center;
+}
+
+ul li {
+  font-family: "Montserrat";
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 28px;
+  text-align: center;
+  padding: 13px 95px;
+}
+
+.basicFeatures li,
+.masterFeatures li {
+  color: #6e728e;
+  border-top: 1px solid rgba(110, 114, 142, 0.25);
+}
+
+.basicFeatures,
+.masterFeatures {
+  border-bottom: 1px solid rgba(110, 114, 142, 0.25);
+  margin-bottom: 32px;
+}
+
+.professionalFeatures li {
+  color: rgba(255, 255, 255, 1);
+  border-top: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.professionalFeatures {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+  margin-bottom: 32px;
+}
+
+.learnMoreBtn {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  padding-block: 14px;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 15.85px;
+  letter-spacing: 1.3928571939468384px;
+  text-align: center;
+  border-radius: 6px;
+}
+
+.basicBox .learnMoreBtn,
+.masterBox .learnMoreBtn {
+  background: linear-gradient(135deg, #a2a7f0 0%, #696edd 100%);
+  color: white;
+  border: none;
+}
+
+.basicBox .learnMoreBtn:hover,
+.masterBox .learnMoreBtn:hover {
+  background: transparent;
+  color: #6d72de;
+  border: 1px solid #6d72de;
+}
+
+.professionalBox .learnMoreBtn {
+  background-color: white;
+  color: #6d72de;
+  border: none;
+}
+
+.professionalBox .learnMoreBtn:hover {
+  background: transparent;
+  color: white;
+  border: 1px solid white;
+}
+
+@media (width >= 1110px) {
+  .container {
+    justify-content: center;
+    background-image: url(../images/bg-lines-2.svg);
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  }
+
+  h2 {
+    margin-top: 0px;
+  }
+
+  .selectionBoxes {
+    flex-direction: row;
+    margin-top: 64px;
+    gap: 0px;
+  }
+
+  .professionalBox {
+    padding: 55px 35px;
+  }
+
+  .basicBox,
+  .masterBox {
+    padding: 31px 31px;
+    border-radius: 10px 0px 0px 10px;
+  }
+}
